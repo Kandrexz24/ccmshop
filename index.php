@@ -27,7 +27,9 @@
 </head>
 
 <body class="bg-gradient-primary">
-
+<?php
+include 'header.php';
+?>
   <!-- CONTENIDO DE LA PAGINA   -->
 <div class="container-fluid">
   <div id="carouselExampleCaptions" class="carousel slide h-100 " data-ride="carousel">
