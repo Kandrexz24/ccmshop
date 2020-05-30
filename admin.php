@@ -27,7 +27,7 @@
   <!-- Page Wrapper -->
   <div id="wrapper">
 
-   <?php include "header_admin2.php" ?>
+   <?php include "Includes/header_admin.php" ?>
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
