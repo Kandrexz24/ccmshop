@@ -2,16 +2,14 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Shop-Maste 2</title>
-  hola mundo
-  hola2
+  <title>Shop</title>
+
   <link href="css/index.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-grid.min.css" rel="stylesheet">
@@ -29,9 +27,8 @@
 </head>
 
 <body class="bg-gradient-primary">
-<?php
-include 'header.php';
-?>
+<?php include 'header.php'?>
+<?php include "conexion/db.php" ?>
   <!-- CONTENIDO DE LA PAGINA   -->
 <div class="container-fluid">
   <div id="carouselExampleCaptions" class="carousel slide h-100 " data-ride="carousel">
