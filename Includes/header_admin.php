@@ -2,11 +2,11 @@
  <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 <!-- Sidebar - Brand -->
-<a class="sidebar-brand d-flex align-items-center justify-content-center" href="admin.html">
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="admin.php">
   <div class="sidebar-brand-icon rotate-n-15">
     <i class="fas fa-laugh-wink"></i>
   </div>
-  <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+  <div class="sidebar-brand-text mx-3">CCMShop Admin <sup>2</sup></div>
 </a>
 
 <!-- Divider -->
@@ -16,7 +16,7 @@
 <li class="nav-item active">
   <a class="nav-link" href="admin.php">
     <i class="fas fa-fw fa-tachometer-alt"></i>
-    <span>Dashboard</span></a>
+    <span>Administrador</span></a>
 </li>
 
 <!-- Divider -->
@@ -51,10 +51,10 @@
   <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
       <h6 class="collapse-header">Utilidades Personalizadas</h6>
-      <a class="collapse-item" href="utilities-color.html">Colors</a>
-      <a class="collapse-item" href="utilities-border.html">Borders</a>
-      <a class="collapse-item" href="utilities-animation.html">Animations</a>
-      <a class="collapse-item" href="utilities-other.html">Other</a>
+      <a class="collapse-item" href="utilities-color.php">Colors</a>
+      <a class="collapse-item" href="utilities-border.php">Borders</a>
+      <a class="collapse-item" href="utilities-animation.php">Animations</a>
+      <a class="collapse-item" href="utilities-other.php">Other</a>
     </div>
   </div>
 </li>
@@ -77,11 +77,11 @@
     <div class="bg-white py-2 collapse-inner rounded">
       <h6 class="collapse-header">Login Screens:</h6>
       <a class="collapse-item" href="login.php">Login</a>
-      <a class="collapse-item" href="register.html">Register</a>
+      <a class="collapse-item" href="registro.php">Register</a>
       <a class="collapse-item" href="forgot-password.php">Forgot Password</a>
       <div class="collapse-divider"></div>
       <h6 class="collapse-header">Other Pages:</h6>
-      <a class="collapse-item" href="404.html">404 Page</a>
+      <a class="collapse-item" href="404.php">404 Page</a>
       <a class="collapse-item" href="blank.php">Blank Page</a>
     </div>
   </div>
@@ -96,7 +96,7 @@
 
 <!-- Nav Item - Tables -->
 <li class="nav-item">
-  <a class="nav-link" href="tables.html">
+  <a class="nav-link" href="tables.php">
     <i class="fas fa-fw fa-table"></i>
     <span>Tables</span></a>
 </li>
