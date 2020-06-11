@@ -1,17 +1,17 @@
 <?php
-//conexion myql
-    //servidor de conexion
-    $server = 'databases.000webhost.com';
-    //usuario del servidor
-    $username = 'root';
-    //contraseña del servidor
-    $password = 'sZg6vK}[]A\|pQ~|';
-    //base de datos de conexion
-    $database = 'csmshop';
+// Declaramos las variables de conexión
+$ServerName = "181.72.63.189";
+$Username = "userccmshop";
+$Password = "ccmshop";
+$NameBD = "ccmdata";
 
-    try {
-        $conn = new PDO("mysql:host=$server;dbname=$database;", $username, $password);
-      } catch (PDOException $e) {
-        die('Connection Failed: ' . $e->getMessage());
-      }
+// Creamos la conexión con MySQL
+$conexion = new mysqli($ServerName, $Username, $Password, $NameBD);
+
+// Revisamos la Conexión MySQL
+if ($conexion->connect_error) {
+    die("Ha fallado la conexión: " . $conexion->connect_error);
+}
+// Enviamos un mensaje de conexión correcta
+echo "Conectado correctamente";
 ?>
