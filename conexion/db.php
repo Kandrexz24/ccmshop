@@ -1,17 +1,14 @@
 <?php
-//conexion myql
-    //servidor de conexion
-    $server = 'databases.000webhost.com';
-    //usuario del servidor
-    $username = 'root';
-    //contraseña del servidor
-    $password = 'sZg6vK}[]A\|pQ~|';
-    //base de datos de conexion
-    $database = 'csmshop';
-
-    try {
-        $conn = new PDO("mysql:host=$server;dbname=$database;", $username, $password);
-      } catch (PDOException $e) {
-        die('Connection Failed: ' . $e->getMessage());
-      }
+$servername = "ccmshop.cl";
+$database = "ccmshopc_christofher";
+$username = "martinabas03";
+$password = "ccmshopc_ccmdata";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $database);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+mysqli_close($conn);
 ?>
