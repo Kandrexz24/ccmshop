@@ -35,7 +35,7 @@
 
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-              <form action="cruds/save_region.php" method="POST">
+              <form action="cruds/save_region2.php" method="POST">
                 <div class="form-group">
                   <label for="formGroupExampleInput">Codigo region</label>
                   <input type="text" name="cod_region" class="form-control" placeholder="Inserte codigo">

@@ -1,7 +1,7 @@
 <?php
 //incluimos la conexion de php
 //include("../conexion/db.php");
-include ("../conexion/db.php");
+include ("conexion/db.php");
 
 $user = new ApptivaDB();
 //si existe a tra ves del metodo post un valor llamado sabe region significa que estan guardando un dato
