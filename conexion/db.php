@@ -1,14 +1,14 @@
 <?php
-$servername = "ccmshop.cl";
-$database = "ccmshopc_christofher";
-$username = "martinabas03";
-$password = "ccmshopc_ccmdata";
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $database);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-echo "Connected successfully";
-mysqli_close($conn);
-?>
+// Declaramos las variables de conexión
+$ServerName = "181.72.63.189";
+$NameBD = "ccmdata";
+$Username = "userccmshop";
+$Password = "ccmshop";
+
+try {
+    $conn = new PDO("mysql:host=$ServerName;dbname=$NameBD;", $Username, $Password);
+    echo "Conectado correctamente";
+  } catch (PDOException $e) {
+    die('Connection Failed: ' . $e->getMessage());
+  }
+?> 
