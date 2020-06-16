@@ -10,10 +10,10 @@
 
   <title>Shop</title>
 
-  <link href="css/index.css" rel="stylesheet">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap-grid.min.css" rel="stylesheet">
-  <link href="css/bootstrap-reboot.min.css" rel="stylesheet">
+  <link href="../css/index.css" rel="stylesheet">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap-grid.min.css" rel="stylesheet">
+  <link href="../css/bootstrap-reboot.min.css" rel="stylesheet">
   <!-- BOOSTRAP -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

@@ -26,7 +26,7 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <?php include "includes/header_nav.php" ?>
+    <?php include "../includes/header_nav.php" ?>
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
