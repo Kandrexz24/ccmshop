@@ -1,4 +1,4 @@
-<?php include "includes/header_login.php" ?>
+<?php include "../includes/header_login.php" ?>
 <body class="bg-gradient-primary">
  <!-- COMIENZO HEADER -->
  <nav class="navbar navbar-expand-lg  navbar-dark bg-dark sticky-top">
@@ -10,17 +10,17 @@
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
       <ul class="navbar-nav m-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="index.php">Principal <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="views/index.php">Principal <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contacto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="login.php">Iniciar Sesion</a>
+          <a class="nav-link" href="views/login.php">Iniciar Sesion</a>
         </li>
       </ul>
       <span class="navbar-text">
-      <a class="nav-link" href="login.php">Iniciar Sesion</a>
+      <a class="nav-link" href="views/login.php">Iniciar Sesion</a>
       </span>
     </div>
   </nav>
