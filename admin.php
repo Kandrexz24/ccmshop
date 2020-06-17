@@ -1,4 +1,4 @@
-
+hola puto
 <?php include "includes/header_admin_mant.php" ?>
 <body id="page-top">
 
