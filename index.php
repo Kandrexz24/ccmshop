@@ -1,6 +1,6 @@
 <?php include "includes/header_index.php" ?>
 <body class="bg-gradient-primary">
-<?php include 'views/header.php'?>
+<?php include 'header.php'?>
   <!-- CONTENIDO DE LA PAGINA   -->
 <div class="container-fluid">
   <div id="carouselExampleCaptions" class="carousel slide h-100 " data-ride="carousel">
@@ -32,8 +32,9 @@
         </div>
       </div>
     </div>
-  
-
+    <?php 
+    include "conexion/db.php";
+    ?>
     <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>

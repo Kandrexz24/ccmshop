@@ -1,8 +1,10 @@
 <?php
+
 include ("../conexion/db.php");
 //include ("conexion.php");
 
 if ($link) {
+echo "todo correcto";
 
 $cod_region = $_POST['cod_region'];
 /* lo que recibas de la variable POST desc region se guardara dentro de la variable local desc region*/
@@ -13,6 +15,8 @@ $query = "INSERT INTO region(COD_REG, DESC_REG) VALUES('$cod_region', '$desc_reg
 //se realiza la consulta y devuelve un resultado
 $result = mysqli_query($link, $query);
 
+
 }
-header("Location: ../mantenedor.php");
+
+
 ?>

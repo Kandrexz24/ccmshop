@@ -1,11 +1,12 @@
-<?php "../db/db.php" ?>
-<?php include "../includes/header_admin_mant.php" ?>
+<?php "conexion/db.php" ?>
+<?php include "includes/header_admin_mant.php" ?>
 <body id="page-top">
 
   <!-- Page Wrapper -->
   <div id="wrapper">
 
-  <?php include "../Includes/header_nav.php" ?>
+
+  <?php include "Includes/header_nav.php" ?>
 
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
@@ -15,7 +16,7 @@
 
   <!-- Topbar Navbar -->
 
-<?php include "../Includes/header_hor_admin.php" ?>
+<?php include "Includes/header_hor_admin.php" ?>
 <!-- End of Topbar -->
         <!-- contenido de la pagina -->
         <div class="container-fluid">
@@ -98,28 +99,30 @@
               <table class="table">
                   <thead class="thead-dark">
                     <tr>
-                      <th scope="col">ID</th>
-                      <th scope="col">Codigo region</th>
-                      <th scope="col">Region</th>
-                      <th scope="col">Accion</th>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
                     </tr>
                   </thead>
                   <tbody>
-                  <?php
-                      $busqueda=$link->prepare("Select * from region");
-                      $busqueda->execute();
-                      $resultado = $busqueda->fetchAll(); 
-                  ?>
-                    <!--recorre la tabla para mostrar los datos-->
                     <tr>
-                        <?php
-                        foreach($resultado as $res)
-                        {
-                            echo "<td>".$res["ID"]."</td>";
-                            echo "<td>".$res["COD_REG"]."</td>";
-                            echo "<td>".$res["DESC_REG"]."</td>";
-                        }   
-                        ?>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Larry</td>
+                      <td>the Bird</td>
+                      <td>@twitter</td>
                     </tr>
                   </tbody>
               </table>

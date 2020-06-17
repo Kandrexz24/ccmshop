@@ -13,7 +13,7 @@
 <hr class="sidebar-divider my-0">
 
 <!-- Nav Item - Dashboard -->
-<li class="nav-item active">  n  j
+<li class="nav-item active">
   <a class="nav-link" href="admin.php">
     <i class="fas fa-fw fa-tachometer-alt"></i>
     <span>Administrador</span></a>
@@ -36,8 +36,8 @@
   <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
       <h6 class="collapse-header">Componentes Personalizados:</h6>
-      <a class="collapse-item" href="../includes/buttons.php">Buttons</a>
-      <a class="collapse-item" href="../includes/cards.php">Cards</a>
+      <a class="collapse-item" href="buttons.php">Buttons</a>
+      <a class="collapse-item" href="cards.php">Cards</a>
     </div>
   </div>
 </li>
