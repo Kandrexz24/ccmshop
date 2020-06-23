@@ -13,11 +13,11 @@
           <a class="nav-link" href="#">Contacto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="views/login.php">Iniciar Sesion</a>
+          <a class="nav-link" href="login.php">Iniciar Sesion</a>
         </li>
       </ul>
       <span class="navbar-text">
-      <a class="nav-link" href="views/login.php">Iniciar Sesion</a>
+      <a class="nav-link" href="login.php">Iniciar Sesion</a>
       </span>
     </div>
   </nav>

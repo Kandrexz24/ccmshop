@@ -1,4 +1,4 @@
-<?php include "../includes/header.php" ?>
+<?php include "includes/header.php" ?>
 <body class="bg-gradient-primary">
 
   <div class="container">

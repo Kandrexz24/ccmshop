@@ -1,10 +1,10 @@
-<?php include "../includes/header.php" ?>
+<?php include "includes/header.php" ?>
 <body id="page-top">
 
   <!-- Page Wrapper -->
   <div id="wrapper">
 
-    <?php include "../Includes/header_nav.php" ?>
+    <?php include "Includes/header_nav.php" ?>
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -14,7 +14,7 @@
 
     <!-- Topbar Navbar -->
 
-   <?php include "../Includes/header_hor_admin.php" ?>
+   <?php include "Includes/header_hor_admin.php" ?>
 <!-- End of Topbar -->
 
         <!-- Begin Page Content -->

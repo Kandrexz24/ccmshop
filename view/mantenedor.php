@@ -1,11 +1,34 @@
-<?php "../db/db.php" ?>
-<?php include "../includes/header_admin_mant.php" ?>
+<!-- <?php include "includes/header_admin_mant.php" ?> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>SB Admin 2 - Dashboard</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-grid.min.css" rel="stylesheet">
+  <link href="css/bootstrap-reboot.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/admin.css" rel="stylesheet">
+
+</head>
 <body id="page-top">
 
   <!-- Page Wrapper -->
   <div id="wrapper">
 
-  <?php include "../Includes/header_nav.php" ?>
+
+  <?php include "Includes/header_nav.php" ?>
 
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
@@ -15,7 +38,7 @@
 
   <!-- Topbar Navbar -->
 
-<?php include "../Includes/header_hor_admin.php" ?>
+<?php include "Includes/header_hor_admin.php" ?>
 <!-- End of Topbar -->
         <!-- contenido de la pagina -->
         <div class="container-fluid">
@@ -25,10 +48,7 @@
               <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Usuario</a>
             </li>
             <li class="nav-item" role="presentation">
-              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Nacionalidad</a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Hola</a>
+              <a class="nav-link" id="tab_estado_tab" data-toggle="pill" href="#tab_estado" role="tab" aria-controls="pills-contact" aria-selected="false">Estado</a>
             </li>
           </ul>
 
@@ -48,22 +68,8 @@
                 </div>
               </form>
             </div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-              <form>
-                <div class="form-group">
-                  <label for="formGroupExampleInput">Example label</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-                </div>
-                <div class="form-group">
-                  <label for="formGroupExampleInput2">Another label</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
-                </div>
-                <div class="form-group">
-                  <input class="btn btn-primary" type="submit" value="Submit">
-                </div>
-              </form>
-            </div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+           
+            <div class="tab-pane fade" id="tab_estado" role="tabpanel" >
               <form>
                 <div class="form-group">
                   <label for="formGroupExampleInput">Example label</label>
@@ -79,117 +85,49 @@
               </form>
             </div>
           </div>
-
-          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Usuario</a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Nacionalidad</a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Hola</a>
-            </li>
-          </ul>
 
           
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+            </li>
+          </ul>
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-              <table class="table">
-                  <thead class="thead-dark">
-                    <tr>
-                      <th scope="col">ID</th>
-                      <th scope="col">Codigo region</th>
-                      <th scope="col">Region</th>
-                      <th scope="col">Accion</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                  <?php
-                      $busqueda=$link->prepare("Select * from region");
-                      $busqueda->execute();
-                      $resultado = $busqueda->fetchAll(); 
-                  ?>
-                    <!--recorre la tabla para mostrar los datos-->
-                    <tr>
-                        <?php
-                        foreach($resultado as $res)
-                        {
-                            echo "<td>".$res["ID"]."</td>";
-                            echo "<td>".$res["COD_REG"]."</td>";
-                            echo "<td>".$res["DESC_REG"]."</td>";
-                        }   
-                        ?>
-                    </tr>
-                  </tbody>
-              </table>
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Codigo Region</th>
+                  <th scope="col">Region</th>
+                </tr>
+              </thead>
+              <tbody>
+              <?php
+                foreach($data["region"] as $dato){
+                  echo "<tr>";
+                    echo "<td>".$dato["ID"]."</td>";
+                    echo "<td>".$dato["COD_REG"]."</td>";
+                    echo "<td>".$dato["DESC_REG"]."</td>";
+                  echo "</tr>";
+                }
+              ?>
+              </tbody>
+            </table>
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-              <table class="table">
-                <thead class="thead-dark">
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
+            ...
             </div>
             <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-              <table class="table">
-                <thead class="thead-dark">
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
+            ...
             </div>
           </div>
-
         </div>
         <!-- /.container-fluid -->
 

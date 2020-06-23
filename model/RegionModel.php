@@ -1,18 +1,24 @@
 <?php
-class regionModel{
-    private $db;
-    private $region;
- 
-    public function __construct(){
-        $this->db=Conectar::conexion();
-        $this->region=array();
-    }
-    public function get_region(){
-        $consulta=$this->db->query("select * from region;");
-        while($filas=$consulta->fetch_assoc()){
-            $this->region[]=$filas;
+
+    class Region_model{
+
+        private $db;
+        private $region;
+
+        public function __construct(){
+            $this->db = Conectar::conexion();
+            $this->region = array();
         }
-        return $this->region;
+
+        public function get_region(){
+            $sql = "select * from region";
+            $resultado = $this->db->query($sql);
+
+            while($row = $resultado->fetch_assoc()){
+                $this->region[] = $row;
+            }
+            return $this->region;
+        }
     }
-}
+
 ?>
