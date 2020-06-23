@@ -1,11 +1,16 @@
+<<<<<<< HEAD:admin.php
 hola puto
 <?php include "includes/header_admin_mant.php" ?>
+=======
+
+<?php include "../includes/header_admin_mant.php" ?>
+>>>>>>> 0412cd72c3489555719e14d30195781c8072c83d:views/admin.php
 <body id="page-top">
 
   <!-- Page Wrapper -->
   <div id="wrapper">
 
-   <?php include "Includes/header_nav.php" ?>
+   <?php include "../Includes/header_nav.php" ?>
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -14,7 +19,7 @@ hola puto
       <div id="content">
 <!-- Topbar Navbar -->
 
-   <?php include "Includes/header_hor_admin.php" ?>
+   <?php include "../Includes/header_hor_admin.php" ?>
 <!-- End of Topbar -->
       
         <!-- Begin Page Content -->
@@ -360,7 +365,6 @@ hola puto
    <script src="js/demo/chart-area-demo.js"></script>
    <script src="js/demo/chart-pie-demo.js"></script>
    <script src="js/demo/chart-bar-demo.js"></script>
-
 </body>
 
 </html>
