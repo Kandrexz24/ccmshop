@@ -1,5 +1,4 @@
 <<<<<<< HEAD:admin.php
-hola puto
 <?php include "includes/header_admin_mant.php" ?>
 =======
 

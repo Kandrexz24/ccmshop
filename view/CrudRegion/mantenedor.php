@@ -1,4 +1,4 @@
-<!-- <?php include "includes/header_admin_mant.php" ?> -->
+ <?php include "includes/header_admin_mant.php" ?> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,15 +11,15 @@
   <meta name="author" content="">
 
   <title>SB Admin 2 - Dashboard</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap-grid.min.css" rel="stylesheet">
-  <link href="css/bootstrap-reboot.min.css" rel="stylesheet">
+  <link href="/CCMSHOP-MASTER/view/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/CCMSHOP-MASTER/view/css/bootstrap-grid.min.css" rel="stylesheet">
+  <link href="/CCMSHOP-MASTER/view/css/bootstrap-reboot.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="/CCMSHOP-MASTER/view/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/admin.css" rel="stylesheet">
+  <link href="/CCMSHOP-MASTER/view/css/admin.css" rel="stylesheet">
 
 </head>
 <body id="page-top">
@@ -53,22 +53,33 @@
           </ul>
 
           <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-              <form action="cruds/save_region2.php" method="POST">
-                <div class="form-group">
-                  <label for="formGroupExampleInput">Codigo region</label>
-                  <input type="text" name="cod_region" class="form-control" placeholder="Inserte codigo">
-                </div>
-                <div class="form-group">
-                  <label for="formGroupExampleInput2">Region</label>
-                  <input type="text" name="desc_region" class="form-control" placeholder="Inserte region">
-                </div>
-                <div class="form-group">
-                  <input type="submit" class="btn btn-primary" name="save_reg" value="Submit">
-                </div>
-              </form>
+            <h1 class="page-header">
+                <?php echo @$region->ID != null ? $region->DESC_REG : 'Nuevo Registro'; ?>
+            </h1>
+
+            <ol class="breadcrumb">
+              <li><a href="?c=region">Region /</a></li>
+              <li class="active"><?php echo @$region->ID != null ? $region->DESC_REG : 'Nuevo Registro'; ?></li>
+            </ol>
+            <form id="frm-region" action="?c=region&a=Guardar" method="post" enctype="multipart/form-data">
+              <input type="hidden" name="ID" value="<?php echo $region->ID; ?>" />
+              <div class="form-group">
+                  <label>Codigo region</label>
+                  <input type="text" name="COD_REG" value="<?php echo @$region->COD_REG; ?>" class="form-control" placeholder="Ingrese codigo de la region" required>
+              </div>
+              
+              <div class="form-group">
+                  <label>Nombre</label>
+                  <input type="text" name="DESC_REG" value="<?php echo @$region->DESC_REG; ?>" class="form-control" placeholder="Ingrese nombre de la region" required>
+              </div>
+              <hr /> 
+              <div class="text-right">
+                  <button class="btn btn-primary">Guardar</button>
+              </div>
+            </form>
+            <div class="tab-pane fade" id="pills-home-tab" role="tabpanel" >
+              
             </div>
-           
             <div class="tab-pane fade" id="tab_estado" role="tabpanel" >
               <form>
                 <div class="form-group">
@@ -100,26 +111,29 @@
           </ul>
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-            <table class="table">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Codigo Region</th>
-                  <th scope="col">Region</th>
-                </tr>
-              </thead>
-              <tbody>
-              <?php
-                foreach($data["region"] as $dato){
-                  echo "<tr>";
-                    echo "<td>".$dato["ID"]."</td>";
-                    echo "<td>".$dato["COD_REG"]."</td>";
-                    echo "<td>".$dato["DESC_REG"]."</td>";
-                  echo "</tr>";
-                }
-              ?>
-              </tbody>
-            </table>
+              <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Codigo Region</th>
+                    <th scope="col">Region</th>
+                    <th scope="col">Accion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php foreach($this->model->Listar() as $r): ?>
+                      <tr>
+                      <td><?php echo $r->ID; ?></td>
+                          <td><?php echo $r->COD_REG; ?></td>
+                          <td><?php echo $r->DESC_REG; ?></td>
+                          <td>
+                              <a  class="btn btn-warning" href="?c=region&a=Crud&ID=<?php echo $r->ID; ?>">Editar</a>
+                              <a  class="btn btn-danger" onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?c=region&a=Eliminar&ID=<?php echo $r->ID; ?>">Eliminar</a>
+                          </td>
+                      </tr>
+                  <?php endforeach; ?>
+                </tbody>
+              </table>
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
             ...
@@ -174,22 +188,22 @@
     </div>
   </div>
    <!-- Bootstrap core JavaScript-->
-   <script src="vendor/jquery/jquery.min.js"></script>
-   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="/CCMSHOP-MASTER/view/vendor/jquery/jquery.min.js"></script>
+   <script src="/CCMSHOP-MASTER/view/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
  
    <!-- Core plugin JavaScript-->
-   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+   <script src="/CCMSHOP-MASTER/view/vendor/jquery-easing/jquery.easing.min.js"></script>
  
    <!-- Custom scripts for all pages-->
-   <script src="js/admin.js"></script>
+   <script src="/CCMSHOP-MASTER/view/js/admin.js"></script>
  
    <!-- Page level plugins -->
-   <script src="vendor/chart.js/Chart.min.js"></script>
+   <script src="/CCMSHOP-MASTER/view/vendor/chart.js/Chart.min.js"></script>
  
    <!-- Page level custom scripts -->
-   <script src="js/demo/chart-area-demo.js"></script>
-   <script src="js/demo/chart-pie-demo.js"></script>
-   <script src="js/demo/chart-bar-demo.js"></script>
+   <script src="/CCMSHOP-MASTER/view/js/demo/chart-area-demo.js"></script>
+   <script src="/CCMSHOP-MASTER/view/js/demo/chart-pie-demo.js"></script>
+   <script src="/CCMSHOP-MASTER/view/js/demo/chart-bar-demo.js"></script>
 
 </body>
 
