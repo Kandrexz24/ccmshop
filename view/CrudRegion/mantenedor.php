@@ -1,4 +1,3 @@
- <?php include "includes/header_admin_mant.php" ?> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,25 +9,26 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Dashboard</title>
-  <link href="/CCMSHOP-MASTER/view/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/CCMSHOP-MASTER/view/css/bootstrap-grid.min.css" rel="stylesheet">
-  <link href="/CCMSHOP-MASTER/view/css/bootstrap-reboot.min.css" rel="stylesheet">
+  <title>Mantenedor</title>
+  <link href="view/css/bootstrap.min.css" rel="stylesheet">
+  <link href="view/css/bootstrap-grid.min.css" rel="stylesheet">
+  <link href="view/css/bootstrap-reboot.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
-  <link href="/CCMSHOP-MASTER/view/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="view/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="/CCMSHOP-MASTER/view/css/admin.css" rel="stylesheet">
+  <link href="view/css/admin.css" rel="stylesheet">
 
 </head>
 <body id="page-top">
 
-  <!-- Page Wrapper -->
+
+ </style>  <!-- Page Wrapper -->
   <div id="wrapper">
 
 
-  <?php include "Includes/header_nav.php" ?>
+  <?php include "view/includes/header_nav.php" ?>
 
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
@@ -38,7 +38,7 @@
 
   <!-- Topbar Navbar -->
 
-<?php include "Includes/header_hor_admin.php" ?>
+<?php include "view/includes/header_hor_admin.php" ?>
 <!-- End of Topbar -->
         <!-- contenido de la pagina -->
         <div class="container-fluid">
@@ -188,22 +188,22 @@
     </div>
   </div>
    <!-- Bootstrap core JavaScript-->
-   <script src="/CCMSHOP-MASTER/view/vendor/jquery/jquery.min.js"></script>
-   <script src="/CCMSHOP-MASTER/view/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="view/vendor/jquery/jquery.min.js"></script>
+   <script src="view/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
  
    <!-- Core plugin JavaScript-->
-   <script src="/CCMSHOP-MASTER/view/vendor/jquery-easing/jquery.easing.min.js"></script>
+   <script src="view/vendor/jquery-easing/jquery.easing.min.js"></script>
  
    <!-- Custom scripts for all pages-->
-   <script src="/CCMSHOP-MASTER/view/js/admin.js"></script>
+   <script src="view/js/admin.js"></script>
  
    <!-- Page level plugins -->
-   <script src="/CCMSHOP-MASTER/view/vendor/chart.js/Chart.min.js"></script>
+   <script src="view/vendor/chart.js/Chart.min.js"></script>
  
    <!-- Page level custom scripts -->
-   <script src="/CCMSHOP-MASTER/view/js/demo/chart-area-demo.js"></script>
-   <script src="/CCMSHOP-MASTER/view/js/demo/chart-pie-demo.js"></script>
-   <script src="/CCMSHOP-MASTER/view/js/demo/chart-bar-demo.js"></script>
+   <script src="view/js/demo/chart-area-demo.js"></script>
+   <script src="view/js/demo/chart-pie-demo.js"></script>
+   <script src="view/js/demo/chart-bar-demo.js"></script>
 
 </body>
 
